@@ -14,3 +14,13 @@ let re = /gd/;
 
 let b = a.match(re);
 console.log(b);
+
+
+// Regular Expression
+
+let message = "Contrary to popular belief, Lorem Ipsum is not simply random text.";
+let regexVowels = /[aeiou]/g;
+let matches = message.match(regexVowels);
+
+console.log(matches);
+
