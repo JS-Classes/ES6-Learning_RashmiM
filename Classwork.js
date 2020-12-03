@@ -13,5 +13,4 @@ console.log(matches);
 let email = "asdad21bb@gmail.com dad34@xyz.net";
 let regexEmail = /[a-z]+\w*@[a-z]+.(com|net)/g;
 let correctEmails = email.match(regexEmail)
-
 console.log(correctEmails);
