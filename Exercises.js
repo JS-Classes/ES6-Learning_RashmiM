@@ -21,21 +21,20 @@
 
 // 3. Program to print multiplication table for numbers from m to n.
 
-function multiplicationTable(m, n, range=10)
-{
-    for(let i = m; i<=n; i++ )
-    {
-        console.log(`Multiplication Table for ${i}`)
-        for(let x = 1; x<=range; x++)
-        {   
-            let mul = m*x;              
-            console.table(`${i} * ${x} = ${mul}`);
-            // console.table(mul);
-        }
-    }
-}
-multiplicationTable(4,5);
+// function MultiplicationTable(m, n, range = 10) {
+//     for (let num = m; num <= n; num++) {
+//         console.log(`Multiplication Table for ${num} till the multiplication range ${range} is :`)
+//         for (let i = 1; i <= range; i++) {
+//             let multiply = num * i;
+//             console.log(`${num} * ${i} = ${multiply}`);
 
+//         }
+//     }
+// }
+
+// MultiplicationTable(2, 4, 20);
+
+// Array of objects
 
 // const people = [
 //     {name: 'Rashmi', dob:'424223',isMale:true},
@@ -52,4 +51,35 @@ multiplicationTable(4,5);
 // b. NUmber of special characters
 // c. Number of vowels and consonants
 
-// 1. Find
+
+
+
+// 2. Find a random string of particular length
+
+// let r = Math.random().toString(36).substring(7);
+// console.log("fkdsjf423dkhs66698", r);
+
+
+let getRandomString = (length) => {
+    const wordChars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    let randomString = '';
+
+    for (let i =0; i < length; i++) {
+        let randomNum = Math.random() * wordChars.length;
+        let index = Math.floor(randomNum);
+        let c = wordChars.charAt(index);
+        randomString += c;
+    }
+    return randomString;
+}
+let randString = getRandomString(20);
+
+console.log(randString);
+
+console.log('A'.charCodeAt(0));
+
+
+
+
+
+

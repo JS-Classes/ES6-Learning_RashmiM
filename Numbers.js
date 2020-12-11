@@ -29,7 +29,31 @@
 // let getRandomNumber = (m, n) => m + Math.random() * (n - m);
 // console.log(getRandomNumber(40,50));
 
-// 2. Find a random string of particular length
 
-let r = Math.random().toString(36).substring(7);
-console.log("fkdsjf423dkhs66698", r);
+
+// 1. Find sd of set of numbers
+
+let GetSD = (numbers) => {
+    // Finding mean
+    let sum = 0;
+    const numberOfItems = numbers.length;
+    for (const num of numbers){
+        sum += num;
+    }
+    const mean = sum / numberOfItems;
+
+    // finding sum[(x - mean)^2]
+    let sqrDiffSum = 0;
+    for (const num of numbers) {
+        let diff = num - mean;
+        let sqrtdiff = Math.pow(diff, 2);
+        sqrDiffSum += sqrtdiff; 
+    }
+
+    // finding sd
+    const sd = Math.sqrt(sqrDiffSum / numberOfItems);
+    return sd;
+}
+const ages = [23, 45, 23,54,65,68];
+let sdAges = GetSD(ages);
+console.log(`Standard Deviation of ages: ${sdAges}`);
