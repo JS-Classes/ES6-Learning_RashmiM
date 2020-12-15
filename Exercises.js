@@ -60,25 +60,35 @@
 // console.log("fkdsjf423dkhs66698", r);
 
 
-let getRandomString = (length) => {
-    const wordChars = 'abcdefghijklmnopqrstuvwxyz0123456789';
-    let randomString = '';
+// let getRandomString = (length) => {
+//     const wordChars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+//     let randomString = '';
 
-    for (let i =0; i < length; i++) {
-        let randomNum = Math.random() * wordChars.length;
-        let index = Math.floor(randomNum);
-        let c = wordChars.charAt(index);
-        randomString += c;
-    }
-    return randomString;
+//     for (let i =0; i < length; i++) {
+//         let randomNum = Math.random() * wordChars.length;
+//         let index = Math.floor(randomNum);
+//         let c = wordChars.charAt(index);
+//         randomString += c;
+//     }
+//     return randomString;
+// }
+// let randString = getRandomString(20);
+
+// console.log(randString);
+
+// // console.log('A'.charCodeAt(0));
+
+function makeid(length) {
+   var result           = '';
+   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+   var charactersLength = characters.length;
+   for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
 }
-let randString = getRandomString(20);
 
-console.log(randString);
-
-console.log('A'.charCodeAt(0));
-
-
+console.log(makeid(20));
 
 
 
