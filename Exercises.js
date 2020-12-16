@@ -91,5 +91,4 @@ function makeid(length) {
 console.log(makeid(20));
 
 
-
-
+// 1. Implement a calculator using ES6 classes.

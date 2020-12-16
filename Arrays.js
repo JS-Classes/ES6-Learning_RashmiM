@@ -25,13 +25,15 @@ authors.slice(2, 5);
 
 
 
-let sum = (x, y, z) => x + y + z;
-let numbers = [3,2,4,6,7,8];
+// let sum = (x, y, z) => x + y + z;
+// let numbers = [3,2,4,6,7,8];
 
-console.log(sum(...numbers));
+// console.log(sum(...numbers));
 
 
-const allNumbers = [34, 55, ...numbers, 12, 23];
-const allNumberss = [...allNumbers];
+// const allNumbers = [34, 55, ...numbers, 12, 23];
+// const allNumberss = [...allNumbers];
 
-console.log(allNumberss);
+// console.log(allNumberss);
+
+authors.forEach(author => console.log(author));
